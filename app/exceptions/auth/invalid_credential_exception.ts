@@ -3,6 +3,9 @@ import { ApiErrorCodes } from '../../enums/api_error_codes.js'
 
 export default class InvalidCredentialException extends Exception {
   constructor() {
-    super('Invalid Credentials', { code: '401', status: ApiErrorCodes.INVALID_CREDENTIALS })
+    super('Invalid Credentials', {
+      code: ApiErrorCodes.INVALID_CREDENTIALS.toString(),
+      status: 401,
+    })
   }
 }
